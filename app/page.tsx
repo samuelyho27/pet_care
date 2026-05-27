@@ -267,6 +267,10 @@ export default function Home() {
             <input type="date" name="date" />
           </label>
           <label>
+            期望到店时间
+            <input type="time" name="arrivalTime" />
+          </label>
+          <label>
             宠物体重
             <input type="text" name="weight" placeholder="例如：6kg" />
           </label>
