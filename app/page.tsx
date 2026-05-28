@@ -1,4 +1,8 @@
 export default function Home() {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const defaultDate = tomorrow.toISOString().split("T")[0];
+
   return (
     <>
 <header className="topbar">
@@ -264,11 +268,11 @@ export default function Home() {
           </label>
           <label>
             期望日期
-            <input type="date" name="date" />
+            <input type="date" name="date" defaultValue={defaultDate} />
           </label>
           <label>
             期望到店时间
-            <input type="time" name="arrivalTime" />
+            <input type="time" name="arrivalTime" defaultValue="09:30" />
           </label>
           <label>
             宠物体重
